@@ -6,10 +6,8 @@
 SoftwareSerial bluetooth(0, 1);
 
 void setup() {
-  // Initiate serial communication at 9600 baud rate.
   Serial.begin(9600);
 
-  // Initiate Bluetooth communication at 9600 baud rate.
   bluetooth.begin(9600);
 
   pinMode(trigPin, OUTPUT);
@@ -20,19 +18,15 @@ void setup() {
 void loop() {
   long duration, distance;
   
-  // Clear the trigPin
   digitalWrite(trigPin, LOW);
   delay(500);
 
-  // Set the trigPin on for 10 microseconds
   digitalWrite(trigPin, HIGH);
   delay(500);
   digitalWrite(trigPin, LOW);
 
-  // Read the echoPin, and calculate the duration in microseconds
   duration = pulseIn(echoPin, HIGH);
 
-  // Calculate the distance
   distance = duration * 0.034 / 2;
 
   if(distance<=20){
