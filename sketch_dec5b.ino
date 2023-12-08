@@ -46,20 +46,7 @@ void loop() {
   bluetooth.print("Distance: ");
   bluetooth.print(distance);
   bluetooth.println(" cm");
-  if(distance<=20){
-    Serial.print("Warning!");
-    Serial.print("Distance: ");
-  Serial.print(distance);
-  Serial.println(" cm");
-    bluetooth.print("Warning!");
-    bluetooth.print("Distance: ");
-  bluetooth.print(distance);
-  bluetooth.println(" cm");
-    delay(500);
-  }
-  }
-
-  
+  } 
   }
 
 
